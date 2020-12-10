@@ -9,14 +9,14 @@
             Mone Test
           </div>
           <!-- 表单部分 -->
-          <el-form class="form_box" :model="form">
-            <el-form-item>
+          <el-form class="form_box" ref="form" :model="form" :rules="rules">
+            <el-form-item prop="user">
               <el-input class="input_1" v-model="form.user" placeholder="请输入账号" >
                 <i slot="prefix" class="el-input__icon el-icon-date"></i>
               </el-input>
             </el-form-item>
-            <el-form-item>
-              <el-input class="input_1" v-model="form.password" placeholder="请输入密码" >
+            <el-form-item prop="password">
+              <el-input class="input_1" show-password v-model="form.password" placeholder="请输入密码" >
                 <i slot="prefix" class="el-input__icon el-icon-date"></i>
               </el-input>
             </el-form-item>
@@ -37,7 +37,26 @@ export default {
         form:{
           user: '',
           password: ''
+        },
+        rules:{
+          user:[
+            {required: true, message: '请输入账号', trigger: 'blur'}
+          ],
+          password:[
+            {required: true, message: '请输入密码', trigger: 'blur'}
+          ]
         }
+      }
+    },
+    methods:{
+      onSubmit(){
+        this.$refs.form.validate((isOK)=>{
+            if(isOK){
+              // 通过表单校验
+                this.$router.push('/')
+            }
+        })
+    
       }
     }
 }
