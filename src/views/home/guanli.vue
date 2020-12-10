@@ -11,11 +11,11 @@
       <!-- </div> -->
       
       <el-container>
-        <el-aside>
+        <el-aside style="160px">
           <small-menu></small-menu>
         </el-aside>
         <el-main>
-          我是主页面
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -43,6 +43,12 @@ export default {
       display: flex;
       align-items: center;
     }
+  }
+  .el-aside {
+    width:160px!important;
+  }
+  .el-main {
+    padding: 0;
   }
   .el-breadcrumb {
     font-size: 12px;

@@ -35,16 +35,17 @@
 
         <el-menu
         default-active="2"
+        router
         >
         <div class="el-menu-item item-title">
             <span>项目配置</span>
             <img src="../../assets/images/edit/u2688.svg" alt="">
         </div>
-        <el-menu-item index="3">
+        <el-menu-item index="/shouye">
           <i class="el-icon-menu"></i>
           <span slot="title">导航二</span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="/guanli/guanli1">
           <i class="el-icon-setting"></i>
           <span slot="title">导航四</span>
         </el-menu-item>

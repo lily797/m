@@ -21,7 +21,13 @@ const routes = [
       },
       {
         path: '/guanli',
-        component: () => import(/* webpackChunkName: "about" */ '../views/home/guanli.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/home/guanli.vue'),
+        children:[
+          {
+            path: 'guanli1',
+            component: () => import('../views/home/guanli/guanli1.vue')
+          }
+        ]
       }
     ]
   },
