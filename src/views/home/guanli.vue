@@ -36,6 +36,7 @@ export default {
     width: 100%;
     background: rgba(242, 242, 242, 1);
     .header_bread {
+      background-color: rgb(250, 250, 250);
       height: 34px!important;
       color: #333;
       font-style: normal;
