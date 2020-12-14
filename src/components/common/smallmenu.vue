@@ -41,9 +41,9 @@
             <span>项目配置</span>
             <img src="../../assets/images/edit/u2688.svg" alt="">
         </div>
-        <el-menu-item index="/shouye">
+        <el-menu-item index="/guanli/testreport">
           <i class="el-icon-menu"></i>
-          <span slot="title">导航二</span>
+          <span slot="title">测试报告</span>
         </el-menu-item>
         <el-menu-item index="/guanli/guanli1">
           <i class="el-icon-setting"></i>

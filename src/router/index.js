@@ -26,6 +26,10 @@ const routes = [
           {
             path: 'guanli1',
             component: () => import('../views/home/guanli/guanli1.vue')
+          },
+          {
+            path: 'testreport',
+            component: () => import('../views/testreport/index.vue')
           }
         ]
       }
